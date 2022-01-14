@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* -------------------------------------------------
+this are googlefont----------------------------------
+--------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+/* --------------------------------------------------
+-------------their was common styles-----------------
+--------------------------------------------------- */
+body{
+    font-family: 'Poppins', sans-serif;
+}
+button{
+    font-size: 16px;
+    background-color: #E02C6D;
+    color: white;
+    width: 196px;
+    height: 44px;
+    border-radius: 41px;
+
+}
+
+/* -----------------------------------------------------
+----------------this is banner styles-------------------
+------------------------------------------------------ */
+
+#banner{
+
+    width: 60%;
+    margin: 100px 20%;
+}
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 50px 0;
+}
+.banner-info{
+    width: 582px;
+    height: 270px;
+}
+.banner-info h1{
+    font-size: 52px;
+    
+    font-weight: 700;
+}
+.banner-info p{
+    font-weight: 600;
+    font-size: 16px;
+    padding: 16px 0;
+}
+.banner-info button span{
+    width: 24px;
+}
+
+.banner-img{
+    width: 475px;
+    height: 475px;
+    border: 3px solid #F1E4FF;
+    border-radius: 50%;
+}
+.img{
+    width: 332.3px;
+    height: 332.3px;
+    background-color: #F1E4FF;
+    border-radius: 50%;
+    margin: 71.35px;
+}
+.img img{
+    width: 440px;
+    height: 414px;
+    margin: 30.5px 17.5px;
+    margin: -46px -66px;
+}
+
+/* --------------------------------------------------------
+------------------this is blogs item----------------------
+-----------------------------------------------------------*/
+
+#all-blogs{
+    width: 61%;
+    margin: 50px 20%;
+}
+#all-blogs h2{
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+    column-gap: 24px;
+    background-color: #F2F2F2;
+    border: 10px solid #F2F2F2;
+    
+}
+
+
+.blog {
+    Width: 300px;
+    max-height: 600px;
+    overflow: hidden;
+    padding: 17px 15px 16px 14px;
+    background-color: #FFFFFF;
+}
+.blog h4{
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    padding-bottom: 6px;
+  
+}
+.blog h3{
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+}
+.blog p{
+    font-size: 14px;
+}
+.blog p span{
+    color: #FB8200;
+}
