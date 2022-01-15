@@ -264,7 +264,9 @@ footer p{
 --------------------------------
 -------------------------------------*/
 @media screen and (max-width: 1024px) {
-    
+    .all-blog-header {
+        margin-top: 50px;
+    }
     .banner{
         flex-direction: column;
     }
