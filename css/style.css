@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -8,31 +9,57 @@ this are googlefont----------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 
+
+
 /* --------------------------------------------------
 -------------their was common styles-----------------
 --------------------------------------------------- */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: #F2F2F2;
 }
-button{
-    font-size: 16px;
-    background-color: #E02C6D;
-    color: white;
-    width: 196px;
-    height: 44px;
-    border-radius: 41px;
+/* --------------------------------------------------
+---------------------this id header styles----------- 
+--------------------------------------------------------- */
 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    
 }
+.name h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 70px 0 70px 100px;
+}
+ul{
+    display: flex;
+    padding-right: 80px;
+}
+ul li{
+    list-style: none;
+    padding-left: 34px;
+}
+ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+}
+
 
 /* -----------------------------------------------------
 ----------------this is banner styles-------------------
 ------------------------------------------------------ */
 
-#banner{
-
-    width: 60%;
-    margin: 100px 20%;
-}
 .banner{
     display: flex;
     align-items: center;
@@ -55,6 +82,21 @@ button{
 }
 .banner-info button span{
     width: 24px;
+}
+button{
+    font-size: 16px;
+    background-color: #E02C6D;
+    color: white;
+    width: 196px;
+    height: 44px;
+    border-radius: 41px;
+    border: 1px solid #E02C6D;
+    transition: 1s;
+}
+button:hover{
+    font-size: 18px;
+    width: 210px;
+    height: 55px;
 }
 
 .banner-img{
@@ -81,35 +123,51 @@ button{
 ------------------this is blogs item----------------------
 -----------------------------------------------------------*/
 
-#all-blogs{
-    width: 61%;
-    margin: 50px 20%;
-}
-#all-blogs h2{
-    font-size: 28px;
-    margin-bottom: 30px;
+
+.all-blog-header{
     text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 28px;
 }
 .blogs{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    align-items: center;
+    
     row-gap: 30px;
-    column-gap: 24px;
-    background-color: #F2F2F2;
-    border: 10px solid #F2F2F2;
+    column-gap: 30px;
     
 }
 
 
 .blog {
     Width: 300px;
-    max-height: 600px;
+    max-height: 500px;
     overflow: hidden;
     padding: 17px 15px 16px 14px;
     background-color: #FFFFFF;
+    
 }
+
+.blog-info{
+    display: none;
+    transition: width 2s, height 2s, transform 2s;
+    border-radius: 2px solid rgb(95, 88, 88);
+    position: relative;
+    width: 290px;
+    height: 75px;
+    top: 0;
+    left: 0;
+    background-color:#f1e9e9;
+    border-radius: 10px;
+    padding: 5px;
+    transition: width 3s;
+}
+.blog:hover .blog-info{
+    display: block;
+ 
+}
+
 .blog h4{
     
     font-style: normal;
@@ -130,3 +188,174 @@ button{
 .blog p span{
     color: #FB8200;
 }
+
+/*---------------------------------
+ this is extra market section 
+--------------------------------- */
+
+#market-info{
+    background-color: #ADC6B3;
+    border-radius: 15px;
+    margin-top: 100px;
+}
+.market-info{
+    text-align: center;
+    
+}
+.market-analysis{
+    display: flex;
+    align-items: center;
+   
+    justify-content: space-evenly;
+
+
+}
+.analysis{
+    width: 25%;
+    background-color: lightblue;
+    border-radius: 14px;
+
+    padding: 20px 10px;
+    margin: 50px 0;
+}
+.market-info h1{
+    font-size: 40px;
+    padding: 20px 0;
+}
+.market-info p{
+    font-size: 20px;
+}
+
+.analysis .far{
+    font-size: 35px !important;
+}
+
+
+/*------------------------------------
+--------- THIS IS FOOTER -------------
+------------------------------------- */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0A0826;
+    color: white;
+    margin-top: 100px; ;
+}
+footer h3{
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+footer p{
+    padding: 10px 0;
+}
+.icons{
+    margin: 6px 0px 50px 0;
+
+}
+.icons a{
+    color: white;
+    padding-right: 10px;
+}
+/* -------------------------------
+---------this are media quary------------
+--------------------------------
+-------------------------------------*/
+@media screen and (max-width: 1024px) {
+    
+    .banner{
+        flex-direction: column;
+    }
+    .banner-info {
+        width: 73%;
+        margin-bottom: 55px;
+        margin-top: -60px;
+    }
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+
+  }
+
+  @media screen and (max-width: 747px) {
+   
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+       
+    }
+    .market-analysis {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: space-evenly;
+        justify-items: center;
+        /* width: 604px; */
+    }
+    .analysis {
+        width: 50%;
+        column-gap: 2px;
+        margin: 10px 0;
+    }
+
+  }
+
+  @media screen and (max-width: 425px){
+      body{
+          background-color: burlywood;
+      }
+      header {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-bottom: 35px;
+    }
+    ul li {
+        list-style: none;
+        padding-left: 16px;
+    }
+    .name h1 {
+        font-size: 24px;
+        padding: 20px 15px;
+    }
+    .banner{
+        display: flex;
+        margin: 50px 0;
+        align-items: center;
+    }
+    .banner-info h1 {
+        font-size: 35px;
+        
+    }
+    .banner-img {
+        width: 300px;
+        height: 300px;
+        margin-top: 71px;
+    }
+    .img{
+        width: 200px;
+        height: 200px;
+        margin: 52px 47px;
+    }
+    .img img {
+        width: 220px;
+        margin: -12px -8px;
+        height: 209px;
+    }
+
+
+    .all-blog-header {
+        margin-top: 0px;
+    }
+    #market-info {
+        margin-top: 35px;
+    }
+    footer {
+        margin-top: 35px;
+    }
+
+    }
+    
+  }
